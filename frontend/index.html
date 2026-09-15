@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Um pedido especial</title>
+  <link rel="stylesheet" href="src/css/styles.css?v=3">
+</head>
+<body>
+  <main id="app" class="page-shell">
+    <section id="welcome-screen" class="screen screen--welcome" aria-labelledby="welcome-title">
+      <div class="sparkle sparkle--one" aria-hidden="true">✦</div>
+      <div class="sparkle sparkle--two" aria-hidden="true">✧</div>
+      <p class="eyebrow">Para você, com carinho</p>
+      <h1 id="welcome-title">Tenho uma coisa<br><em>para te contar.</em></h1>
+      <p class="intro-copy">Preparei uma pequena surpresa.<br>Abra quando estiver pronta.</p>
+      <button id="open-letter" class="button button--primary" type="button">
+        Estou pronta <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <section id="letter-screen" class="screen screen--letter is-hidden" aria-labelledby="letter-title" aria-hidden="true">
+      <p id="letter-title" class="eyebrow">Carta escrita especialmente para você</p>
+      <div class="letter-frame">
+        <img src="assets/carta.png" alt="" onerror="this.classList.add('image-missing')">
+        <p class="image-fallback">Coloque sua carta em<br><strong>frontend/assets/carta.png</strong></p>
+      </div>
+      <button id="continue-button" class="button button--secondary" type="button">
+        Continuar <span aria-hidden="true">→</span>
+      </button>
+    </section>
+
+    <section id="question-screen" class="screen screen--question is-hidden" aria-labelledby="question-title" aria-hidden="true">
+      <div class="question-mark" aria-hidden="true">♡</div>
+      <p class="eyebrow">Então, eu preciso perguntar...</p>
+      <h2 id="question-title">Quer namorar<br><em>comigo?</em></h2>
+      <div class="answer-area">
+        <button id="yes-button" class="button button--primary" type="button">Sim! <span aria-hidden="true">♡</span></button>
+        <button id="no-button" class="button button--outline" type="button">Não</button>
+      </div>
+      <p id="answer-message" class="answer-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="success-screen" class="screen screen--success is-hidden" aria-labelledby="success-title" aria-hidden="true">
+      <div class="ring" aria-hidden="true">💍</div>
+      <p class="eyebrow">Eu sabia que sim</p>
+      <h2 id="success-title">Agora falta só<br><em>um detalhe.</em></h2>
+      <p class="success-copy">Copie a aliança e cole na sua bio.<br> ♡</p>
+      <button id="copy-ring-button" class="button button--primary" type="button">
+        Copiar aliança <span aria-hidden="true">💍</span>
+      </button>
+      <p class="teaser-copy">calma, a de verdade vai vir</p>
+      <p id="copy-message" class="answer-message" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <script src="src/js/main.js?v=2"></script>
+</body>
+</html>

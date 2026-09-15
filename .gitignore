@@ -1,0 +1,11 @@
+# Dependencias
+node_modules/
+
+# Variaveis de ambiente
+.env
+
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
