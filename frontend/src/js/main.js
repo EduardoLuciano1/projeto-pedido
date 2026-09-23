@@ -44,11 +44,3 @@ noButton.addEventListener('click', () => {
 	answerMessage.textContent = 'Acho que essa era a resposta certa. ♡';
 });
 
-copyRingButton.addEventListener('click', async () => {
-	try {
-		await navigator.clipboard.writeText('💍');
-		copyMessage.textContent = 'Aliança copiada! Agora é só colar na bio. ♡';
-	} catch {
-		copyMessage.textContent = 'Selecione e copie esta aliança: 💍';
-	}
-});
