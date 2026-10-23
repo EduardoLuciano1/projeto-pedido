@@ -4,52 +4,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Um pedido especial</title>
-  <link rel="stylesheet" href="src/css/styles.css?v=3">
+  <link rel="stylesheet" href="src/css/styles.css?v=11">
 </head>
 <body>
   <main id="app" class="page-shell">
     <section id="welcome-screen" class="screen screen--welcome" aria-labelledby="welcome-title">
-      <div class="sparkle sparkle--one" aria-hidden="true">✦</div>
-      <div class="sparkle sparkle--two" aria-hidden="true">✧</div>
-      <p class="eyebrow">Para você, com carinho</p>
-      <h1 id="welcome-title">Tenho uma coisa<br><em>para te contar.</em></h1>
+      <div class="sparkle sparkle--one" aria-hidden="true">♡</div>
+      <div class="sparkle sparkle--two" aria-hidden="true">♥</div>
+      <h1 id="welcome-title">Tenho algo pra você,<br><em>Anna.</em></h1>
       <p class="intro-copy">Preparei uma pequena surpresa.<br>Abra quando estiver pronta.</p>
       <button id="open-letter" class="button button--primary" type="button">
-        Estou pronta <span aria-hidden="true">→</span>
+      <span aria-hidden="true">→</span>
       </button>
+    </section>
+
+    <section id="memories-screen" class="screen screen--memories is-hidden" aria-labelledby="memories-title" aria-hidden="true">
+      <p class="eyebrow">Um pouco de nós</p>
+      <h2 id="memories-title" class="memories-title">♥</h2>
+      <figure class="memory-frame">
+        <img id="memory-image" src="assets/foto-01.jpeg" alt="Uma lembrança nossa">
+      </figure>
+      <div class="memory-controls">
+        <span id="memory-counter" class="memory-counter" aria-live="polite">1 / 6</span>
+        <button id="next-memory" class="button button--primary" type="button">Próxima lembrança <span aria-hidden="true">→</span></button>
+      </div>
     </section>
 
     <section id="letter-screen" class="screen screen--letter is-hidden" aria-labelledby="letter-title" aria-hidden="true">
       <p id="letter-title" class="eyebrow">Carta escrita especialmente para você</p>
       <div class="letter-frame">
-        <img src="assets/carta.png" alt="" onerror="this.classList.add('image-missing')">
-        <p class="image-fallback">Coloque sua carta em<br><strong>frontend/assets/carta.png</strong></p>
+        <img src="assets/carta.jpeg" alt="" onerror="this.classList.add('image-missing')">
+        <p class="image-fallback">Coloque sua carta em<br><strong>frontend/assets/carta.jpeg</strong></p>
       </div>
       <button id="continue-button" class="button button--secondary" type="button">
         Continuar <span aria-hidden="true">→</span>
       </button>
     </section>
 
-    <section id="question-screen" class="screen screen--question is-hidden" aria-labelledby="question-title" aria-hidden="true">
-      <div class="question-mark" aria-hidden="true">♡</div>
-      <p class="eyebrow">Então, eu preciso perguntar...</p>
-      <h2 id="question-title">Anna -----, quer namorar<br><em>comigo?</em></h2>
-      <div class="answer-area">
-        <button id="yes-button" class="button button--primary" type="button">Sim! <span aria-hidden="true">♡</span></button>
-        <button id="no-button" class="button button--outline" type="button">Não</button>
-      </div>
-      <p id="answer-message" class="answer-message" role="status" aria-live="polite"></p>
+    <section id="adjectives-screen" class="screen screen--adjectives is-hidden" aria-labelledby="adjectives-title" aria-hidden="true">
+      <p class="eyebrow">E tem tanta coisa bonita em você...</p>
+      <h2 id="adjectives-title" class="adjectives-title">Você é</h2>
+      <ul class="adjective-list">
+        <li>linda</li>
+        <li>carinhosa</li>
+        <li>engraçada</li>
+        <li>inteligente</li>
+        <li>companheira</li>
+        <li>gentil</li>
+        <li>forte</li>
+        <li>criativa</li>
+        <li>atenciosa</li>
+        <li>corajosa</li>
+        <li>doce</li>
+        <li>brilhante</li>
+        <li>especial</li>
+        <li>autêntica</li>
+        <li>divertida</li>
+        <li>generosa</li>
+        <li>admirável</li>
+        <li>encantadora</li>
+        <li>determinada</li>
+        <li>incrível</li>
+        <li>acolhedora</li>
+        <li>paciente</li>
+        <li>inspiradora</li>
+        <li>talentosa</li>
+        <li>maravilhosa</li>
+        <li>única</li>
+        <li>preciosa</li>
+        <li>leal</li>
+        <li>sincera</li>
+        <li>sensível</li>
+        <li>espontânea</li>
+        <li>observadora</li>
+        <li>delicada</li>
+        <li>esforçada</li>
+        <li>dedicada</li>
+        <li>compreensiva</li>
+        <li>responsável</li>
+        <li>cuidadosa</li>
+        <li>charmosa</li>
+        <li>radiante</li>
+        <li>meiga</li>
+        <li>elegante</li>
+        <li>iluminada</li>
+        <li>tranquila</li>
+        <li>cativante</li>
+        <li>amorosa</li>
+        <li>verdadeira</li>
+        <li>fascinante</li>
+        <li>memorável</li>
+        <li>resiliente</li>
+        <li>sábia</li>
+        <li>empática</li>
+        <li>solar</li>
+        <li>encorajadora</li>
+        <li>incomparável</li>
+      </ul>
+      <button id="adjectives-continue" class="button button--primary" type="button">Continuar <span aria-hidden="true">→</span></button>
     </section>
 
-    <section id="success-screen" class="screen screen--success is-hidden" aria-labelledby="success-title" aria-hidden="true">
-      <div class="ring" aria-hidden="true">💍</div>
-      <p class="eyebrow">Eu sabia que sim</p>
-      <h2 id="success-title">TE AMO MUITO!</h2>
-      <p class="success-copy">Agora só falta a aliança<br> ♡</p>
-      <p class="teaser-copy">calma, ela vai vir, prometo.</p>
-      <p id="copy-message" class="answer-message" role="status" aria-live="polite"></p>
+    <section id="question-screen" class="screen screen--question is-hidden" aria-labelledby="question-title" aria-hidden="true">
+      <h2 id="question-title">Preciso te fazer uma perguntar...</h2>
     </section>
   </main>
-  <script src="src/js/main.js?v=2"></script>
+  <audio id="background-music" src="assets/euamovoce.mp3" preload="auto" loop></audio>
+  <script src="src/js/main.js?v=6"></script>
 </body>
 </html>
